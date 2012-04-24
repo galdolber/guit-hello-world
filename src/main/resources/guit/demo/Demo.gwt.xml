@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='demo'>
+	<inherits name='com.guit.Guit' />
+
+	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+
+	<set-configuration-property name="app.default.place"
+		value="guit.demo.client.Home" />
+	<extend-configuration-property name="app.gin.module"
+		value="guit.demo.client.DemoModule" />
+
+	<source path='client' />
+</module>
