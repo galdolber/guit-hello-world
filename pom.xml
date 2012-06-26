@@ -12,7 +12,7 @@
 
 	<properties>
 		<!-- Convenience property to set the GWT version -->
-		<gwtVersion>2.4.0</gwtVersion>
+		<gwtVersion>2.5.0-SNAPSHOT</gwtVersion>
 		<!-- GWT needs at least java 1.5 -->
 		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,12 +30,12 @@
 		<dependency>
 			<groupId>guit</groupId>
 			<artifactId>guit</artifactId>
-			<version>1.7.0</version>
+			<version>1.7.1</version>
 		</dependency>
 		<dependency>
 			<groupId>guit</groupId>
 			<artifactId>guit-gen</artifactId>
-			<version>1.7.0</version>
+			<version>1.7.1</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -60,6 +60,12 @@
 		<dependency>
 			<groupId>com.google.gwt</groupId>
 			<artifactId>gwt-user</artifactId>
+			<version>${gwtVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-dev</artifactId>
 			<version>${gwtVersion}</version>
 			<scope>provided</scope>
 		</dependency>
@@ -133,7 +139,7 @@
 				<configuration>
 					<runTarget>Demo.html</runTarget>
 					<hostedWebapp>${webappDirectory}</hostedWebapp>
-					<extraJvmArgs>-javaagent:/Applications/ZeroTurnaround/JRebel/jrebel.jar -Xmx1024m -XX:MaxPermSize=1024m</extraJvmArgs>
+					<extraJvmArgs>-Xmx1024m -XX:MaxPermSize=1024m</extraJvmArgs>
 				</configuration>
 			</plugin>
 
