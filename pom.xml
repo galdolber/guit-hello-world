@@ -139,7 +139,7 @@
 				<configuration>
 					<runTarget>Demo.html</runTarget>
 					<hostedWebapp>${webappDirectory}</hostedWebapp>
-					<extraJvmArgs>-Xmx1024m -XX:MaxPermSize=1024m</extraJvmArgs>
+					<extraJvmArgs>-javaagent:/Applications/ZeroTurnaround/JRebel/jrebel.jar -Xmx1024m -XX:MaxPermSize=1024m</extraJvmArgs>
 				</configuration>
 			</plugin>
 

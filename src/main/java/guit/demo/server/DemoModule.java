@@ -10,7 +10,7 @@ public class DemoModule extends ServletModule {
 
   @Override
   protected void configureServlets() {
-    serve("/Demo/service").with(GuiceGwtServlet.class);
+    serve("/demo/service").with(GuiceGwtServlet.class);
 
     bind(CommandHook.class).to(Hook.class);
 

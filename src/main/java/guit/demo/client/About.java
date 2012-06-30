@@ -21,10 +21,10 @@ public class About extends AboutPresenter implements Place<Void> {
 
   @Override
   public void go(Void data) {
+    display.setWidget(getView());
     serverServiceAsync.getContent().fire(new Async<String>() {
       @Override
       public void success(String html) {
-        display.setWidget(getView());
         content.html(html);
       }
 
