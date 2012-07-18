@@ -12,7 +12,7 @@
 
 	<properties>
 		<!-- Convenience property to set the GWT version -->
-		<gwtVersion>2.5.0-SNAPSHOT</gwtVersion>
+		<gwtVersion>2.5.0-rc1</gwtVersion>
 		<!-- GWT needs at least java 1.5 -->
 		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,12 +30,12 @@
 		<dependency>
 			<groupId>guit</groupId>
 			<artifactId>guit</artifactId>
-			<version>1.7.1</version>
+			<version>1.8.0</version>
 		</dependency>
 		<dependency>
 			<groupId>guit</groupId>
 			<artifactId>guit-gen</artifactId>
-			<version>1.7.1</version>
+			<version>1.8.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -70,6 +70,12 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-elemental</artifactId>
+      <version>${gwtVersion}</version>
+      <scope>provided</scope>
+    </dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
@@ -79,14 +85,14 @@
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 			<version>1.0.0.GA</version>
-			<scope>test</scope>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 			<version>1.0.0.GA</version>
 			<classifier>sources</classifier>
-			<scope>test</scope>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
@@ -125,7 +131,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>gwt-maven-plugin</artifactId>
-				<version>2.4.0</version>
+				<version>${gwtVersion}</version>
 				<executions>
 					<execution>
 						<goals>
@@ -139,7 +145,7 @@
 				<configuration>
 					<runTarget>Demo.html</runTarget>
 					<hostedWebapp>${webappDirectory}</hostedWebapp>
-					<extraJvmArgs>-javaagent:/Applications/ZeroTurnaround/JRebel/jrebel.jar -Xmx1024m -XX:MaxPermSize=1024m</extraJvmArgs>
+					<extraJvmArgs>-Xmx1024m -XX:MaxPermSize=1024m</extraJvmArgs>
 				</configuration>
 			</plugin>
 
@@ -165,8 +171,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
+					<source>1.6</source>
+					<target>1.6</target>
 				</configuration>
 			</plugin>
 		</plugins>

@@ -8,3 +8,5 @@ target
 .project
 
 src/rebel.xml
+
+.buildpath
